@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Task2</title>
+  </head>
+  <body>
+    <form name="countProg" method="get" action="<?=$_SERVER['PHP_SELF']?>">
+      countProg:<input type="text" name="a">
+    <input type="submit">
+  </form>
+  </body>
+</html>
+<?php
+$check=isset($_GET['a']);
+
+if($check=1){
+  $countProg=$_GET['a'];
+  $countChars=strlen($countProg);
+  if ($countChars==1){
+    $lastNumb=$countProg;
+  }
+  else{
+    $lastNumb=$countProg%(($countChars-1)*10);
+
+  }
+  //echo $lastNumb;
+  switch ($lastNumb) {
+    case 0:
+      echo "$countProg Программистов";
+      break;
+    case 1:
+      echo "$countProg Программист";
+      break;
+    case 2:
+      echo "$countProg Программиста";
+      break;
+    case 3:
+      echo "$countProg Программиста";
+      break;
+    case 4:
+      echo "$countProg Программиста";
+      break;
+    default:
+      echo "$countProg Программистов";
+      break;
+  }
+}
+?>
