@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FirstTaskFlex</title>
+  <style>
+  /*Global css*/
+  .wrap{display:flex
+  flex-direction:column;
+  justify-content: space-between;
+  }
+  .parent{display:flex;
+  }
+
+  /*header css*/
+  header.parent{
+
+  flex-direction: row;
+
+  justify-content: flex-end;
+  }
+  header.parent>div{
+    padding-right: 20px;
+  }
+
+  /*main css*/
+  main{justify-content: center;
+    align-self:center;
+  }
+
+  .search-wrap{
+    display:flex;
+    width:60%;
+    height:50px;
+    background-color:#ffdb4d;
+    gap:0px;
+    /*                      */
+
+
+
+  }
+
+  div.form{
+    display:flex;
+    background-color:white;
+    height:43px;
+    width:90%;
+    margin-top:0px;
+    margin-left:0px;
+    gap:30px;
+
+  }
+
+  .search-wrap>div{
+
+    align-self:center;
+    margin-left:10px;
+
+  }
+
+  input{
+    border-color:white;
+    border-style:solid;
+    width:90%;
+  }
+  input:focus{
+
+    outline:none !important;
+  }
+
+  .cross{
+    justify-content: center;
+    align-self: center;
+    font-size:20px;
+    color:grey;
+  }
+  /*figure css */
+  .fig_wrap{
+    display:flex;
+    flex-direction: column;
+
+  }
+  .fig_one{
+    background-color:#ffdb4d;
+    height:25px;
+    width:50px;
+    background:linear-gradient(-115deg, transparent 25px, #ffdb4d 0) top right;
+  }
+  .fig_two{
+    background-color:#ffdb4d;
+    height:25px;
+    width:50px;
+    background: linear-gradient(-65deg, transparent 25px, #ffdb4d 0)
+  }
+  main{padding-top:250px}
+  /*footer css*/
+  footer.parent{
+    justify-content: center;
+  }
+  footer{padding-top:300px;}
+
+  </style>
+  </head>
+  <body>
+    <div class='wrap'>
+      <header class="parent">
+        <div><a style="color:red">o</a>leg.frizen</div>
+        <div>Почта 1072</div>
+        <div>Выход</div>
+
+      </header>
+      <main class="parent">
+        <div class="search-wrap parent">
+          <div class="form">
+            <input type="text"  maxlength="400" >
+            <div class='cross'>✕</div>
+          </div>
+
+          <div class=butn>Найти</div>
+
+        </div>
+          <div class=fig_wrap>
+          <div class="fig_one"></div>
+          <div class="fig_two"></div>
+        </div>
+      </main>
+      <footer class="parent">
+        <div>Яндекс</div>
+      </footer>
+    </div>
+
+  </body>
+</html>
